@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        app:bl_corners_radius="10dp"
+        app:bl_solid_color="@color/white"
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    <TextView
+            android:text="请联系管理员"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:text="请联系管理员"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <com.deadline.statebutton.StateButton
+            android:id="@+id/dialog_wjmm_sure"
+            app:radius="5dp"
+            app:normalTextColor="@android:color/white"
+            app:pressedTextColor="@android:color/white"
+            app:normalBackgroundColor="@color/colorPrimaryDark"
+            app:pressedBackgroundColor="@color/color_yellow"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="50dp"
+            android:text="确定"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
