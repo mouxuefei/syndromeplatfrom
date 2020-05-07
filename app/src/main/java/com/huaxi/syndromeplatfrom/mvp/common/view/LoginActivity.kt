@@ -1,4 +1,4 @@
-package com.huaxi.syndromeplatfrom.view
+package com.huaxi.syndromeplatfrom.mvp.common.view
 
 import android.graphics.Color
 import android.view.View
@@ -9,8 +9,10 @@ import com.exmple.corelib.utils.nicedialog.MNiceDialog
 import com.exmple.corelib.utils.nicedialog.getViewById
 import com.exmple.corelib.utils.nicedialog.mDialog
 import com.huaxi.syndromeplatfrom.R
-import com.huaxi.syndromeplatfrom.contract.ILoginContract
-import com.huaxi.syndromeplatfrom.presenter.LoginPresenter
+import com.huaxi.syndromeplatfrom.mvp.common.contract.ILoginContract
+import com.huaxi.syndromeplatfrom.mvp.common.presenter.LoginPresenter
+import com.huaxi.syndromeplatfrom.mvp.pgz.view.PGZHomeActivity
+import com.huaxi.syndromeplatfrom.mvp.ssz.view.SSZHomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
@@ -56,17 +58,15 @@ class LoginActivity : MBaseMvpActivity<ILoginContract.View, ILoginContract.Prese
         }
 
         login_ssz.setOnClickListener {
-            myStartActivity<HomeActivity>()
+            myStartActivity<SSZHomeActivity>()
         }
         login_pgz.setOnClickListener {
-//            myStartActivity<HomeActivity>()
-            mPresenter.getData {
-
-            }
+            myStartActivity<PGZHomeActivity>()
         }
     }
 
-    override var mPresenter: ILoginContract.Presenter = LoginPresenter()
+    override var mPresenter: ILoginContract.Presenter =
+        LoginPresenter()
 
 }
 

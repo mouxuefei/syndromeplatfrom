@@ -31,7 +31,7 @@ abstract class MBaseMvpTitleActivity<V : ITopView, P : ITopPresenter> : MBaseMvp
         val container = this.findViewById(R.id.base_container) as FrameLayout
         container.addView(layoutInflater.inflate(childView(), null))
         val toolbar = this.findViewById(R.id.base_toolbar) as Toolbar
-        titleTv =findViewById(R.id.base_title_tv) as TextView
+        titleTv = findViewById<TextView>(R.id.base_title_tv)
         toolbar.title = ""
         setSupportActionBar(toolbar)
         if (hasBackIcon()) {
