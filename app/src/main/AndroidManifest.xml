@@ -20,7 +20,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".view.SplashActivity"
+                android:name="com.huaxi.syndromeplatfrom.mvp.common.view.SplashActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                 android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -29,11 +29,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.HomeActivity"
+        <activity android:name=".mvp.pgz.view.PGZHomeActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="adjustResize"/>
 
-        <activity android:name=".view.LoginActivity"
+        <activity android:name=".mvp.ssz.view.SSZHomeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.huaxi.syndromeplatfrom.mvp.common.view.LoginActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                   android:windowSoftInputMode="adjustResize"/>
     </application>

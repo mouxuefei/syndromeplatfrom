@@ -1,7 +1,7 @@
-package com.huaxi.syndromeplatfrom.presenter
+package com.huaxi.syndromeplatfrom.mvp.common.presenter
 
 import com.exmple.corelib.mvp.MBasePresenterKt
-import com.huaxi.syndromeplatfrom.contract.ISplashContract
+import com.huaxi.syndromeplatfrom.mvp.common.contract.ISplashContract
 
 /**
  * @describe

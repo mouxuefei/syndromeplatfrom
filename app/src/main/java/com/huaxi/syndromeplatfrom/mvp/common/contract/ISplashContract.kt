@@ -1,4 +1,4 @@
-package com.huaxi.syndromeplatfrom.contract
+package com.huaxi.syndromeplatfrom.mvp.common.contract
 
 import com.exmple.corelib.mvp.IPresenter
 import com.exmple.corelib.mvp.IView

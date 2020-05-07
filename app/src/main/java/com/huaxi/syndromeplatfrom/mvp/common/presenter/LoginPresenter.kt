@@ -1,4 +1,4 @@
-package com.huaxi.syndromeplatfrom.presenter
+package com.huaxi.syndromeplatfrom.mvp.common.presenter
 
 import com.exmple.corelib.http.entity.BaseBean
 import com.exmple.corelib.http.entity.ListBean
@@ -6,7 +6,7 @@ import com.exmple.corelib.http.http
 import com.exmple.corelib.mvp.MBasePresenterKt
 import com.exmple.corelib.utils.showToastBottom
 import com.huaxi.syndromeplatfrom.bean.ArticleData
-import com.huaxi.syndromeplatfrom.contract.ILoginContract
+import com.huaxi.syndromeplatfrom.mvp.common.contract.ILoginContract
 import com.huaxi.syndromeplatfrom.http.MainRetrofit
 
 /**

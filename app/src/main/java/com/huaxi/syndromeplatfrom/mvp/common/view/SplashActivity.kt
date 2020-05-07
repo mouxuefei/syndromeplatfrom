@@ -1,11 +1,11 @@
-package com.huaxi.syndromeplatfrom.view
+package com.huaxi.syndromeplatfrom.mvp.common.view
 
 import com.exmple.corelib.base.LibApplication
 import com.exmple.corelib.exts.myStartActivity
 import com.exmple.corelib.mvp.MBaseMvpActivity
 import com.huaxi.syndromeplatfrom.R
-import com.huaxi.syndromeplatfrom.contract.ISplashContract
-import com.huaxi.syndromeplatfrom.presenter.SplashPresenter
+import com.huaxi.syndromeplatfrom.mvp.common.contract.ISplashContract
+import com.huaxi.syndromeplatfrom.mvp.common.presenter.SplashPresenter
 
 /**
  * @describe
@@ -23,7 +23,8 @@ class SplashActivity : MBaseMvpActivity<ISplashContract.View, ISplashContract.Pr
         },1000)
     }
 
-    override var mPresenter: ISplashContract.Presenter= SplashPresenter()
+    override var mPresenter: ISplashContract.Presenter=
+        SplashPresenter()
 
 }
 
