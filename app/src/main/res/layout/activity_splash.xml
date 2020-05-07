@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-            android:text="aaaa"
-            android:layout_width="wrap_content"
+    <com.huaxi.syndromeplatfrom.viewss.CustomSettingItemView
+            android:id="@+id/aaaa"
+            android:layout_width="match_parent"
+            app:settingItemTitle="测试标题4"
+            app:settingItemDesc="测试详情4"
+            app:settingLogoSrc="@mipmap/ic_launcher"
+            app:settingMoreSrc="@mipmap/ic_launcher"
+            app:settingItemUnderLineVisibility="true"
+            app:settingLeftIconVisible="false"
             android:layout_height="wrap_content"/>
-</RelativeLayout>
+
+    <com.huaxi.syndromeplatfrom.viewss.CustomInputItemView
+            android:layout_width="match_parent"
+            app:inputHint="请输入姓名"
+            app:inputMust="true"
+            app:inputTitle="姓名"
+            app:settingItemUnderLineVisibility="true"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

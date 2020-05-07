@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomSettingItemView">
+        <!--        Item标题-->
+        <attr name="settingItemTitle" format="string"/>
+        <!--        Item描述-->
+        <attr name="settingItemDesc" format="string"/>
+        <!--        第一张图片-->
+        <attr name="settingLogoSrc" format="reference"/>
+
+        <!--        第二张图片-->
+        <attr name="settingMoreSrc" format="reference"/>
+        <!--        下划线显示与否-->
+        <attr name="settingItemUnderLineVisibility" format="boolean"/>
+
+        <attr name="settingLeftIconVisible" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomInputItemView">
+        <!--        Item标题-->
+        <attr name="inputTitle" format="string"/>
+        <!--        Item描述-->
+        <attr name="inputHint" format="string"/>
+        <!--        Item描述-->
+        <attr name="inputMust" format="boolean"/>
+        <!--        下划线显示与否-->
+        <attr name="inputItemUnderLineVisibility" format="boolean"/>
+    </declare-styleable>
+</resources>
