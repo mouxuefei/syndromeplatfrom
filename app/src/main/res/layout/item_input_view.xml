@@ -1,63 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:focusable="true">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:orientation="vertical">
 
     <!--   线性布局水平对齐包裹-->
     <LinearLayout
-            android:gravity="center_vertical"
-            android:id="@+id/setting_item"
-            android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:orientation="horizontal">
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/setting_item"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+      >
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/input_must"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/color_red"
+                android:textSize="16sp" />
 
             <TextView
-                    android:id="@+id/input_must"
-                    android:textColor="@color/color_red"
-                    android:text="*"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            <TextView
-                    android:text="AAAA"
-                    android:id="@+id/input_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:gravity="center"
-                    android:textColor="#000000"
-                    android:textSize="16sp"/>
+                android:id="@+id/input_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="AAAA"
+                android:textColor="#000000"
+                android:textSize="16sp" />
         </LinearLayout>
 
         <!--   自定义控件中标题-->
 
         <EditText
-                android:id="@+id/input_et"
-                android:textSize="16sp"
-                android:textColorHint="@color/aaaaaa"
-                android:textColor="@color/_666"
-                android:background="@null"
-                android:singleLine="true"
-                android:layout_marginLeft="10dp"
-                android:hint="请输入"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+            android:id="@+id/input_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入"
+            android:singleLine="true"
+            android:textColor="@color/_666"
+            android:textColorHint="@color/aaaaaa"
+            android:textSize="16sp" />
     </LinearLayout>
     <!--   自定义控件中下划线-->
     <View
-            android:id="@+id/input_line"
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="#888888"/>
+        android:id="@+id/input_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#888888" />
 </LinearLayout>

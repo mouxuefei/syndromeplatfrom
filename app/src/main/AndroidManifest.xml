@@ -20,7 +20,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name="com.huaxi.syndromeplatfrom.mvp.common.view.SplashActivity"
+                android:name=".view.SplashActivity"
                 android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
                 android:windowSoftInputMode="adjustResize">
             <intent-filter>
