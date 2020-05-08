@@ -1,12 +1,13 @@
 package com.huaxi.syndromeplatfrom.mvp.ssz.view
 
-import com.huaxi.syndromeplatfrom.mvp.ssz.contract.ISSZHomeContract
+import android.support.v4.app.Fragment
 import com.exmple.corelib.mvp.MBaseMvpActivity
 import com.huaxi.syndromeplatfrom.R
-import com.huaxi.syndromeplatfrom.mvp.pgz.contract.IPGZHomeContract
-import com.huaxi.syndromeplatfrom.mvp.pgz.presenter.PGZHomePresenter
+import com.huaxi.syndromeplatfrom.adapter.MyAdapter
+import com.huaxi.syndromeplatfrom.mvp.ssz.contract.ISSZHomeContract
 import com.huaxi.syndromeplatfrom.mvp.ssz.presenter.SSZHomePresenter
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_ssz.*
+
 
 /**
  * @describe
@@ -17,23 +18,40 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class SSZHomeActivity : MBaseMvpActivity<ISSZHomeContract.View, ISSZHomeContract.Presenter>(),
     ISSZHomeContract.View {
-    override fun getContentView() = R.layout.activity_main
+
+    override fun getContentView() = R.layout.activity_main_ssz
 
     override fun initView() {
-        msv.onRetry = {
-            getData()
-        }
-        getData()
+        val mFragmentList = ArrayList<Fragment>()
+        mFragmentList.add(TabFragment())
+        mFragmentList.add(TabFragment())
+        mFragmentList.add(TabFragment())
+        main_vp.adapter = MyAdapter(supportFragmentManager, mFragmentList)
+        main_vp.setNoScroll(true)
+        bottomBar.setViewPager(main_vp)
+////        msv.onRetry = {
+////            getData()
+////        }
+////        getData()
+//
+//        bottomBar.setOnItemSelectedListener(object : BottomBarLayout.OnItemSelectedListener {
+//            fun onItemSelected(bottomBarItem: BottomBarItem?, position: Int) {
+//                //do something
+//            }
+//
+//            override fun onItemSelected(p0: BottomBarItem?, p1: Int, p2: Int) {
+//            }
+//        })
     }
 
     fun getData() {
-        mPresenter.getData({
-            msv.showLoading()
-        }, {
-            msv.showError()
-        }, {
-            msv.showSuccess()
-        })
+//        mPresenter.getData({
+//            msv.showLoading()
+//        }, {
+//            msv.showError()
+//        }, {
+//            msv.showSuccess()
+//        })
     }
 
     override var mPresenter: ISSZHomeContract.Presenter =
